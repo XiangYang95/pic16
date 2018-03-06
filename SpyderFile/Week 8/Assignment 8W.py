@@ -6,6 +6,7 @@ Created on Wed Feb 28 15:22:50 2018
 """
 import numpy as np
 from matplotlib import pyplot as plt
+
 from scipy.optimize import minimize
 from scipy.integrate import trapz
  
@@ -19,6 +20,7 @@ y_data = np.sqrt(1 - x_data**2)
 z0 = np.append(x_data[N-1], y_data[:N-1])
 
 plt.plot(x_data, y_data)
+
 
 def z2xy(z):
     xs = np.linspace(0, z[0], N)
@@ -56,4 +58,6 @@ result1 = minimize(obj, new_z0, bounds = bounds, constraints = con)
 print result1
 
 x2, y2 = z2xy(new_z0)
+
+
 plt.plot(x2,y2)
