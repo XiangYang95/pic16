@@ -26,5 +26,5 @@ t = np.linspace(0, 10, 101)
 
 sol = spint.odeint(f1, init_cond, t)
 
-plt.plot(t, sol[:,0])
+plt.plot(sol[:,0], sol[:,1])
     
