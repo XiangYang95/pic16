@@ -40,7 +40,7 @@ with open("data2.csv", 'wb') as k:
     data_writer = csv.writer(k, delimiter = ",")
     namelist = []; phonelist = []
     for row in data_list[1:]:
-
+        print row[1]
         #first create a condition to ignore faulty numbers
         NotFaulty = (regex5.findall(row[1]) or regex6.findall(row[1]) or regex7.findall(row[1]) or regex8.findall(row[1]) or regex9.findall(row[1]))
         

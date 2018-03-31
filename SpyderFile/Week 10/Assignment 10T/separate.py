@@ -5,8 +5,8 @@ Created on Sun Mar 06 14:36:04 2016
 @author: Matt
 """
 
+# using scipy's imread
 
-import cv2
 import numpy as np
 
 def boundaries(binarized,axis):
@@ -40,13 +40,15 @@ def separate(img):
     return cropped
 
 # Example usage
-big_img = cv2.imread("a.png", 0) # flatten = True converts to grayscale
-cv2.imshow("a",big_img)
-cv2.waitKey(1000)
-cv2.destroyAllWindows()
-
-imgs = separate(big_img) # separates big_img (pure white = 255) into array of little images (pure white = 1.0)
-for img in imgs:
-    cv2.imshow("a",img) 
-    cv2.waitKey(250)
-cv2.destroyAllWindows()
+# =============================================================================
+# big_img = imread("a.png", flatten = True) # flatten = True converts to grayscale
+# cv2.imshow("a",big_img/255)
+# cv2.waitKey(1000)
+# cv2.destroyAllWindows()
+# 
+# imgs = separate(big_img) # separates big_img (pure white = 255) into array of little images (pure white = 1.0)
+# for img in imgs:
+#     cv2.imshow("a",img) 
+#     cv2.waitKey(250)
+# cv2.destroyAllWindows()
+# =============================================================================

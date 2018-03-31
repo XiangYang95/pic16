@@ -28,7 +28,7 @@ for k in setx:
 
 print dictx
 
-f = open("C:\Users\Lenovo\Desktop\Pic 16\.ipynb_checkpoints\The Mysterious Affair at Styles.txt", "r")
+f = open("The Mysterious Affair at Styles.txt", "r")
 
 fileOfF = f.read()
 
